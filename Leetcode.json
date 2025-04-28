@@ -1,0 +1,66 @@
+[
+    {
+      "function_body": "(define (count-positive-in-range x y) (length (filter (λ (i) (> i 0)) (range x y))))",
+      "precondition": "x < y",
+      "postcondition": "(= result (length (filter (λ (x) (> x 0)) (range x y))))",
+      "test_bounds": { "min_x": -5, "max_x": 10, "min_y": 0, "max_y": 15 },
+      "num_cases": 5
+    },
+    {
+      "function_body": "(define (sum-of-positives x y) (apply + (filter (λ (i) (> i 0)) (range x y))))",
+      "precondition": "x <= y",
+      "postcondition": "(= result (apply + (filter (λ (i) (> i 0)) (range x y))))",
+      "test_bounds": { "min_x": -10, "max_x": 5, "min_y": -2, "max_y": 12 },
+      "num_cases": 6
+    },
+    {
+      "function_body": "(define (count-evens x y) (length (filter even? (range x y))))",
+      "precondition": "x < y",
+      "postcondition": "(= result (length (filter even? (range x y))))",
+      "test_bounds": { "min_x": 0, "max_x": 10, "min_y": 1, "max_y": 20 },
+      "num_cases": 4
+    },
+    {
+      "function_body": "(define (count-multiples x y) (length (filter (λ (i) (= (modulo i 3) 0)) (range x y))))",
+      "precondition": "x < y",
+      "postcondition": "(= result (length (filter (λ (i) (= (modulo i 3) 0)) (range x y))))",
+      "test_bounds": { "min_x": 0, "max_x": 30, "min_y": 1, "max_y": 40 },
+      "num_cases": 5
+    },
+    {
+      "function_body": "(define (diff-square-sum x y) (- (* (+ x y) (+ x y)) (+ (* x x) (* y y))))",
+      "precondition": "#t",
+      "postcondition": "(= result (- (* (+ x y) (+ x y)) (+ (* x x) (* y y))))",
+      "test_bounds": { "min_x": -10, "max_x": 10, "min_y": -10, "max_y": 10 },
+      "num_cases": 5
+    },
+    {
+      "function_body": "(define (is-between x y) (and (> y x) (< y (+ x 10))))",
+      "precondition": "#t",
+      "postcondition": "(= result (and (> y x) (< y (+ x 10))))",
+      "test_bounds": { "min_x": 0, "max_x": 100, "min_y": 0, "max_y": 200 },
+      "num_cases": 5
+    },
+    {
+      "function_body": "(define (clamp x y) (if (< x 0) 0 (if (> x y) y x)))",
+      "precondition": "y >= 0",
+      "postcondition": "(= result (if (< x 0) 0 (if (> x y) y x)))",
+      "test_bounds": { "min_x": -10, "max_x": 100, "min_y": 0, "max_y": 100 },
+      "num_cases": 5
+    },
+    {
+      "function_body": "(define (same-parity x y) (= (modulo x 2) (modulo y 2)))",
+      "precondition": "#t",
+      "postcondition": "(= result (= (modulo x 2) (modulo y 2)))",
+      "test_bounds": { "min_x": 0, "max_x": 100, "min_y": 0, "max_y": 100 },
+      "num_cases": 4
+    },
+    {
+      "function_body": "(define (product-minus-sum x y) (- (* x y) (+ x y)))",
+      "precondition": "#t",
+      "postcondition": "(= result (- (* x y) (+ x y)))",
+      "test_bounds": { "min_x": 0, "max_x": 100, "min_y": 0, "max_y": 100 },
+      "num_cases": 5
+    }
+  ]
+  

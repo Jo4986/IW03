@@ -1,0 +1,347 @@
+[
+  {
+    "function" : "(define (count-positive-in-range x y) (length (filter (λ (i) (> i 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 5,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 9,
+        "y" : 4,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : 6,
+        "y" : 13,
+        "result" : 7
+      },
+      {
+        "pass" : true,
+        "x" : 1,
+        "y" : 14,
+        "result" : 13
+      },
+      {
+        "pass" : true,
+        "x" : 0,
+        "y" : 11,
+        "result" : 10
+      },
+      {
+        "pass" : true,
+        "x" : 7,
+        "y" : 10,
+        "result" : 3
+      }
+    ]
+  },
+  {
+    "function" : "(define (sum-of-positives x y) (apply + (filter (λ (i) (> i 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 6,
+      "total_cases" : 6
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : -7,
+        "y" : 8,
+        "result" : 28
+      },
+      {
+        "pass" : true,
+        "x" : -4,
+        "y" : 2,
+        "result" : 1
+      },
+      {
+        "pass" : true,
+        "x" : 1,
+        "y" : 8,
+        "result" : 28
+      },
+      {
+        "pass" : true,
+        "x" : -8,
+        "y" : 9,
+        "result" : 36
+      },
+      {
+        "pass" : true,
+        "x" : -8,
+        "y" : 12,
+        "result" : 66
+      },
+      {
+        "pass" : true,
+        "x" : -10,
+        "y" : 11,
+        "result" : 55
+      }
+    ]
+  },
+  {
+    "function" : "(define (count-evens x y) (length (filter even? (range x y))))",
+    "stats" : {
+      "passed_cases" : 4,
+      "total_cases" : 4
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 6,
+        "y" : 19,
+        "result" : 7
+      },
+      {
+        "pass" : true,
+        "x" : 1,
+        "y" : 9,
+        "result" : 4
+      },
+      {
+        "pass" : true,
+        "x" : 0,
+        "y" : 13,
+        "result" : 7
+      },
+      {
+        "pass" : true,
+        "x" : 8,
+        "y" : 12,
+        "result" : 2
+      }
+    ]
+  },
+  {
+    "function" : "(define (count-multiples x y) (length (filter (λ (i) (= (modulo i 3) 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 5,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 29,
+        "y" : 28,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : 9,
+        "y" : 21,
+        "result" : 4
+      },
+      {
+        "pass" : true,
+        "x" : 13,
+        "y" : 2,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : 17,
+        "y" : 28,
+        "result" : 4
+      },
+      {
+        "pass" : true,
+        "x" : 5,
+        "y" : 10,
+        "result" : 2
+      }
+    ]
+  },
+  {
+    "function" : "(define (diff-square-sum x y) (- (* (+ x y) (+ x y)) (+ (* x x) (* y y))))",
+    "stats" : {
+      "passed_cases" : 5,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 1,
+        "y" : 3,
+        "result" : 6
+      },
+      {
+        "pass" : true,
+        "x" : 2,
+        "y" : -8,
+        "result" : -32
+      },
+      {
+        "pass" : true,
+        "x" : -9,
+        "y" : -5,
+        "result" : 90
+      },
+      {
+        "pass" : true,
+        "x" : -6,
+        "y" : -1,
+        "result" : 12
+      },
+      {
+        "pass" : true,
+        "x" : -8,
+        "y" : 5,
+        "result" : -80
+      }
+    ]
+  },
+  {
+    "function" : "(define (is-between x y) (and (> y x) (< y (+ x 10))))",
+    "stats" : {
+      "passed_cases" : 0,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : false,
+        "x" : 24,
+        "y" : 169,
+        "result" : false
+      },
+      {
+        "pass" : false,
+        "x" : 64,
+        "y" : 3,
+        "result" : false
+      },
+      {
+        "pass" : false,
+        "x" : 69,
+        "y" : 164,
+        "result" : false
+      },
+      {
+        "pass" : false,
+        "x" : 22,
+        "y" : 102,
+        "result" : false
+      },
+      {
+        "pass" : false,
+        "x" : 77,
+        "y" : 16,
+        "result" : false
+      }
+    ]
+  },
+  {
+    "function" : "(define (clamp x y) (if (< x 0) 0 (if (> x y) y x)))",
+    "stats" : {
+      "passed_cases" : 5,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 46,
+        "y" : 15,
+        "result" : 15
+      },
+      {
+        "pass" : true,
+        "x" : 66,
+        "y" : 80,
+        "result" : 66
+      },
+      {
+        "pass" : true,
+        "x" : 44,
+        "y" : 92,
+        "result" : 44
+      },
+      {
+        "pass" : true,
+        "x" : 25,
+        "y" : 73,
+        "result" : 25
+      },
+      {
+        "pass" : true,
+        "x" : 92,
+        "y" : 12,
+        "result" : 12
+      }
+    ]
+  },
+  {
+    "function" : "(define (same-parity x y) (= (modulo x 2) (modulo y 2)))",
+    "stats" : {
+      "passed_cases" : 0,
+      "total_cases" : 4
+    },
+    "tests" : [
+      {
+        "pass" : false,
+        "x" : 47,
+        "y" : 96,
+        "result" : false
+      },
+      {
+        "pass" : false,
+        "x" : 34,
+        "y" : 38,
+        "result" : true
+      },
+      {
+        "pass" : false,
+        "x" : 3,
+        "y" : 17,
+        "result" : true
+      },
+      {
+        "pass" : false,
+        "x" : 74,
+        "y" : 80,
+        "result" : true
+      }
+    ]
+  },
+  {
+    "function" : "(define (product-minus-sum x y) (- (* x y) (+ x y)))",
+    "stats" : {
+      "passed_cases" : 5,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 86,
+        "y" : 67,
+        "result" : 5609
+      },
+      {
+        "pass" : true,
+        "x" : 22,
+        "y" : 1,
+        "result" : -1
+      },
+      {
+        "pass" : true,
+        "x" : 66,
+        "y" : 99,
+        "result" : 6369
+      },
+      {
+        "pass" : true,
+        "x" : 98,
+        "y" : 59,
+        "result" : 5625
+      },
+      {
+        "pass" : true,
+        "x" : 24,
+        "y" : 65,
+        "result" : 1471
+      }
+    ]
+  }
+]

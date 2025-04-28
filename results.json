@@ -1,0 +1,698 @@
+[
+  {
+    "function" : "(define (count-positive-in-range x y) (length (filter (λ (i) (> i 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 5,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 0,
+        "y" : 4,
+        "result" : 3
+      },
+      {
+        "pass" : true,
+        "x" : 2,
+        "y" : 6,
+        "result" : 4
+      },
+      {
+        "pass" : true,
+        "x" : 1,
+        "y" : 12,
+        "result" : 11
+      },
+      {
+        "pass" : true,
+        "x" : 3,
+        "y" : 15,
+        "result" : 12
+      },
+      {
+        "pass" : true,
+        "x" : 10,
+        "y" : 12,
+        "result" : 2
+      }
+    ]
+  },
+  {
+    "function" : "(define (sum-of-positives x y) (apply + (filter (λ (i) (> i 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 6,
+      "total_cases" : 6
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 3,
+        "y" : 12,
+        "result" : 63
+      },
+      {
+        "pass" : true,
+        "x" : -8,
+        "y" : 3,
+        "result" : 3
+      },
+      {
+        "pass" : true,
+        "x" : -6,
+        "y" : 7,
+        "result" : 21
+      },
+      {
+        "pass" : true,
+        "x" : -4,
+        "y" : 1,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : -7,
+        "y" : 4,
+        "result" : 6
+      },
+      {
+        "pass" : true,
+        "x" : 3,
+        "y" : 6,
+        "result" : 12
+      }
+    ]
+  },
+  {
+    "function" : "(define (count-evens x y) (length (filter even? (range x y))))",
+    "stats" : {
+      "passed_cases" : 4,
+      "total_cases" : 4
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 3,
+        "y" : 20,
+        "result" : 8
+      },
+      {
+        "pass" : true,
+        "x" : 1,
+        "y" : 16,
+        "result" : 7
+      },
+      {
+        "pass" : true,
+        "x" : 9,
+        "y" : 8,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : 6,
+        "y" : 16,
+        "result" : 5
+      }
+    ]
+  },
+  {
+    "function" : "(define (product-range x y) (if (>= x y) 1 (apply * (range x y))))",
+    "stats" : {
+      "passed_cases" : 5,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 4,
+        "y" : 10,
+        "result" : 60480
+      },
+      {
+        "pass" : true,
+        "x" : 3,
+        "y" : 6,
+        "result" : 60
+      },
+      {
+        "pass" : true,
+        "x" : 1,
+        "y" : 6,
+        "result" : 120
+      },
+      {
+        "pass" : true,
+        "x" : 4,
+        "y" : 5,
+        "result" : 4
+      },
+      {
+        "pass" : true,
+        "x" : 3,
+        "y" : 8,
+        "result" : 2520
+      }
+    ]
+  },
+  {
+    "function" : "(define (sum-squares x y) (apply + (map (λ (i) (* i i)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 5,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 2,
+        "y" : 11,
+        "result" : 384
+      },
+      {
+        "pass" : true,
+        "x" : 2,
+        "y" : 7,
+        "result" : 90
+      },
+      {
+        "pass" : true,
+        "x" : 1,
+        "y" : 9,
+        "result" : 204
+      },
+      {
+        "pass" : true,
+        "x" : 4,
+        "y" : 11,
+        "result" : 371
+      },
+      {
+        "pass" : true,
+        "x" : 2,
+        "y" : 6,
+        "result" : 54
+      }
+    ]
+  },
+  {
+    "function" : "(define (neg-count x y) (length (filter (λ (i) (< i 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 5,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : -7,
+        "y" : 5,
+        "result" : 7
+      },
+      {
+        "pass" : true,
+        "x" : -8,
+        "y" : -5,
+        "result" : 3
+      },
+      {
+        "pass" : true,
+        "x" : -9,
+        "y" : 4,
+        "result" : 9
+      },
+      {
+        "pass" : true,
+        "x" : -6,
+        "y" : 5,
+        "result" : 6
+      },
+      {
+        "pass" : true,
+        "x" : 0,
+        "y" : 0,
+        "result" : 0
+      }
+    ]
+  },
+  {
+    "function" : "(define (sum-multiples-of-3 x y) (apply + (filter (λ (i) (= (modulo i 3) 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 5,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 10,
+        "y" : 8,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : 10,
+        "y" : 13,
+        "result" : 12
+      },
+      {
+        "pass" : true,
+        "x" : 15,
+        "y" : 14,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : 2,
+        "y" : 17,
+        "result" : 45
+      },
+      {
+        "pass" : true,
+        "x" : 12,
+        "y" : 8,
+        "result" : 0
+      }
+    ]
+  },
+  {
+    "function" : "(define (count-positives x y) (length (filter (λ (i) (> i 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 4,
+      "total_cases" : 4
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 1,
+        "y" : 4,
+        "result" : 3
+      },
+      {
+        "pass" : true,
+        "x" : -1,
+        "y" : 10,
+        "result" : 9
+      },
+      {
+        "pass" : true,
+        "x" : 2,
+        "y" : 6,
+        "result" : 4
+      },
+      {
+        "pass" : true,
+        "x" : -1,
+        "y" : 4,
+        "result" : 3
+      }
+    ]
+  },
+  {
+    "function" : "(define (range-length x y) (- y x))",
+    "stats" : {
+      "passed_cases" : 3,
+      "total_cases" : 3
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 15,
+        "y" : 20,
+        "result" : 5
+      },
+      {
+        "pass" : true,
+        "x" : 5,
+        "y" : 18,
+        "result" : 13
+      },
+      {
+        "pass" : true,
+        "x" : 4,
+        "y" : 27,
+        "result" : 23
+      }
+    ]
+  },
+  {
+    "function" : "(define (count-divisible-by-2-or-5 x y) (length (filter (λ (i) (or (= (modulo i 2) 0) (= (modulo i 5) 0))) (range x y))))",
+    "stats" : {
+      "passed_cases" : 5,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 2,
+        "y" : 23,
+        "result" : 13
+      },
+      {
+        "pass" : true,
+        "x" : 1,
+        "y" : 15,
+        "result" : 8
+      },
+      {
+        "pass" : true,
+        "x" : 0,
+        "y" : 8,
+        "result" : 5
+      },
+      {
+        "pass" : true,
+        "x" : 6,
+        "y" : 15,
+        "result" : 5
+      },
+      {
+        "pass" : true,
+        "x" : 7,
+        "y" : 23,
+        "result" : 9
+      }
+    ]
+  },
+  {
+    "function" : "(define (sum-negatives x y) (apply + (filter (λ (i) (< i 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 4,
+      "total_cases" : 4
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : -1,
+        "y" : 2,
+        "result" : -1
+      },
+      {
+        "pass" : true,
+        "x" : -1,
+        "y" : 2,
+        "result" : -1
+      },
+      {
+        "pass" : true,
+        "x" : -6,
+        "y" : 7,
+        "result" : -21
+      },
+      {
+        "pass" : true,
+        "x" : -8,
+        "y" : 1,
+        "result" : -36
+      }
+    ]
+  },
+  {
+    "function" : "(define (sum-all x y) (apply + (range x y)))",
+    "stats" : {
+      "passed_cases" : 5,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 1,
+        "y" : 2,
+        "result" : 1
+      },
+      {
+        "pass" : true,
+        "x" : 15,
+        "y" : 10,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : 12,
+        "y" : 12,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : 10,
+        "y" : 10,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : 3,
+        "y" : 28,
+        "result" : 375
+      }
+    ]
+  },
+  {
+    "function" : "(define (sum-of-odds x y) (apply + (filter odd? (range x y))))",
+    "stats" : {
+      "passed_cases" : 5,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 4,
+        "y" : 10,
+        "result" : 21
+      },
+      {
+        "pass" : true,
+        "x" : 4,
+        "y" : 9,
+        "result" : 12
+      },
+      {
+        "pass" : true,
+        "x" : 6,
+        "y" : 11,
+        "result" : 16
+      },
+      {
+        "pass" : true,
+        "x" : 1,
+        "y" : 13,
+        "result" : 36
+      },
+      {
+        "pass" : true,
+        "x" : 1,
+        "y" : 5,
+        "result" : 4
+      }
+    ]
+  },
+  {
+    "function" : "(define (count-primes x y) (define (prime? n) (and (> n 1) (for/none ([i (in-range 2 n)]) (= (remainder n i) 0)))) (length (filter prime? (range x y))))",
+    "stats" : {
+      "passed_cases" : 0,
+      "total_cases" : 3
+    },
+    "tests" : [
+      {
+        "pass" : false,
+        "x" : 4,
+        "y" : 11,
+        "result" : "evaluation-error"
+      },
+      {
+        "pass" : false,
+        "x" : 10,
+        "y" : 12,
+        "result" : "evaluation-error"
+      },
+      {
+        "pass" : false,
+        "x" : 10,
+        "y" : 20,
+        "result" : "evaluation-error"
+      }
+    ]
+  },
+  {
+    "function" : "(define (zero-count x y) (length (filter (λ (i) (= i 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 2,
+      "total_cases" : 2
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : -2,
+        "y" : 2,
+        "result" : 1
+      },
+      {
+        "pass" : true,
+        "x" : -1,
+        "y" : 0,
+        "result" : 0
+      }
+    ]
+  },
+  {
+    "function" : "(define (range-even-sum x y) (apply + (filter even? (range x y))))",
+    "stats" : {
+      "passed_cases" : 4,
+      "total_cases" : 4
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 8,
+        "y" : 12,
+        "result" : 18
+      },
+      {
+        "pass" : true,
+        "x" : 7,
+        "y" : 9,
+        "result" : 8
+      },
+      {
+        "pass" : true,
+        "x" : 6,
+        "y" : 13,
+        "result" : 36
+      },
+      {
+        "pass" : true,
+        "x" : 0,
+        "y" : 14,
+        "result" : 42
+      }
+    ]
+  },
+  {
+    "function" : "(define (positive-diff-count x y) (length (filter (λ (i) (> (- y i) 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 3,
+      "total_cases" : 3
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 5,
+        "y" : 4,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : 4,
+        "y" : 5,
+        "result" : 1
+      },
+      {
+        "pass" : true,
+        "x" : 3,
+        "y" : 6,
+        "result" : 3
+      }
+    ]
+  },
+  {
+    "function" : "(define (count-all x y) (length (range x y)))",
+    "stats" : {
+      "passed_cases" : 4,
+      "total_cases" : 4
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 4,
+        "y" : 7,
+        "result" : 3
+      },
+      {
+        "pass" : true,
+        "x" : 3,
+        "y" : 15,
+        "result" : 12
+      },
+      {
+        "pass" : true,
+        "x" : 3,
+        "y" : 10,
+        "result" : 7
+      },
+      {
+        "pass" : true,
+        "x" : 5,
+        "y" : 9,
+        "result" : 4
+      }
+    ]
+  },
+  {
+    "function" : "(define (sum-even-indices x y) (apply + (map (λ (i) (if (even? i) i 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 4,
+      "total_cases" : 4
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 8,
+        "y" : 7,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : 5,
+        "y" : 6,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : 2,
+        "y" : 7,
+        "result" : 12
+      },
+      {
+        "pass" : true,
+        "x" : 8,
+        "y" : 9,
+        "result" : 8
+      }
+    ]
+  },
+  {
+    "function" : "(define (count-positive-multiples x y) (length (filter (λ (i) (and (> i 0) (= (modulo i 3) 0))) (range x y))))",
+    "stats" : {
+      "passed_cases" : 5,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : -5,
+        "y" : 11,
+        "result" : 3
+      },
+      {
+        "pass" : true,
+        "x" : -1,
+        "y" : 15,
+        "result" : 4
+      },
+      {
+        "pass" : true,
+        "x" : -4,
+        "y" : 14,
+        "result" : 4
+      },
+      {
+        "pass" : true,
+        "x" : -1,
+        "y" : 5,
+        "result" : 1
+      },
+      {
+        "pass" : true,
+        "x" : 8,
+        "y" : 8,
+        "result" : 0
+      }
+    ]
+  }
+]

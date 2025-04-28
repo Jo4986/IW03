@@ -1,0 +1,353 @@
+[
+  {
+    "function" : "(define (count-positive-in-range x y) (length (filter (λ (i) (> i 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 3,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : -4,
+        "y" : 12,
+        "result" : 11
+      },
+      {
+        "pass" : true,
+        "x" : -4,
+        "y" : 3,
+        "result" : 2
+      },
+      {
+        "pass" : true,
+        "x" : 10,
+        "y" : 14,
+        "result" : 4
+      },
+      {
+        "pass" : false,
+        "x" : 3,
+        "y" : 3,
+        "result" : "precondition-failed"
+      },
+      {
+        "pass" : false,
+        "x" : 6,
+        "y" : 0,
+        "result" : "precondition-failed"
+      }
+    ]
+  },
+  {
+    "function" : "(define (count-positive-in-range x y) (length (filter (λ (i) (> i 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 5,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : -3,
+        "y" : 15,
+        "result" : 14
+      },
+      {
+        "pass" : true,
+        "x" : 5,
+        "y" : 15,
+        "result" : 10
+      },
+      {
+        "pass" : true,
+        "x" : -5,
+        "y" : 1,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : 10,
+        "y" : 3,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : 7,
+        "y" : 14,
+        "result" : 7
+      }
+    ]
+  },
+  {
+    "function" : "(define (count-positive-in-range x y) (length (filter (λ (i) (> i 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 2,
+      "total_cases" : 5
+    },
+    "tests" : [
+      {
+        "pass" : false,
+        "x" : 10,
+        "y" : 6,
+        "result" : "precondition-failed"
+      },
+      {
+        "pass" : true,
+        "x" : 7,
+        "y" : 8,
+        "result" : 1
+      },
+      {
+        "pass" : true,
+        "x" : 1,
+        "y" : 5,
+        "result" : 4
+      },
+      {
+        "pass" : false,
+        "x" : 9,
+        "y" : 6,
+        "result" : "precondition-failed"
+      },
+      {
+        "pass" : false,
+        "x" : -1,
+        "y" : 1,
+        "result" : 0
+      }
+    ]
+  },
+  {
+    "function" : "(define (sum-of-positives x y) (apply + (filter (λ (i) (> i 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 5,
+      "total_cases" : 6
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 3,
+        "y" : 4,
+        "result" : 3
+      },
+      {
+        "pass" : true,
+        "x" : -2,
+        "y" : 5,
+        "result" : 10
+      },
+      {
+        "pass" : true,
+        "x" : -3,
+        "y" : 11,
+        "result" : 55
+      },
+      {
+        "pass" : true,
+        "x" : 5,
+        "y" : 10,
+        "result" : 35
+      },
+      {
+        "pass" : false,
+        "x" : 1,
+        "y" : 0,
+        "result" : "precondition-failed"
+      },
+      {
+        "pass" : true,
+        "x" : 1,
+        "y" : 9,
+        "result" : 36
+      }
+    ]
+  },
+  {
+    "function" : "(define (sum-of-positives x y) (apply + (filter (λ (i) (> i 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 0,
+      "total_cases" : 6
+    },
+    "tests" : [
+      {
+        "pass" : false,
+        "x" : -5,
+        "y" : 2,
+        "result" : "precondition-failed"
+      },
+      {
+        "pass" : false,
+        "x" : 1,
+        "y" : 10,
+        "result" : "precondition-failed"
+      },
+      {
+        "pass" : false,
+        "x" : -4,
+        "y" : 2,
+        "result" : "precondition-failed"
+      },
+      {
+        "pass" : false,
+        "x" : -2,
+        "y" : 9,
+        "result" : "precondition-failed"
+      },
+      {
+        "pass" : false,
+        "x" : -7,
+        "y" : 10,
+        "result" : "precondition-failed"
+      },
+      {
+        "pass" : false,
+        "x" : 0,
+        "y" : 1,
+        "result" : "precondition-failed"
+      }
+    ]
+  },
+  {
+    "function" : "(define (sum-of-positives x y) (apply + (filter (λ (i) (> i 0)) (range x y))))",
+    "stats" : {
+      "passed_cases" : 2,
+      "total_cases" : 6
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : -7,
+        "y" : 7,
+        "result" : 21
+      },
+      {
+        "pass" : false,
+        "x" : 2,
+        "y" : 2,
+        "result" : "precondition-failed"
+      },
+      {
+        "pass" : false,
+        "x" : 4,
+        "y" : 8,
+        "result" : 22
+      },
+      {
+        "pass" : false,
+        "x" : 5,
+        "y" : 8,
+        "result" : 18
+      },
+      {
+        "pass" : true,
+        "x" : -7,
+        "y" : 8,
+        "result" : 28
+      },
+      {
+        "pass" : false,
+        "x" : 1,
+        "y" : 1,
+        "result" : "precondition-failed"
+      }
+    ]
+  },
+  {
+    "function" : "(define (count-evens x y) (length (filter even? (range x y))))",
+    "stats" : {
+      "passed_cases" : 3,
+      "total_cases" : 4
+    },
+    "tests" : [
+      {
+        "pass" : false,
+        "x" : 3,
+        "y" : 1,
+        "result" : "precondition-failed"
+      },
+      {
+        "pass" : true,
+        "x" : 0,
+        "y" : 20,
+        "result" : 10
+      },
+      {
+        "pass" : true,
+        "x" : 0,
+        "y" : 14,
+        "result" : 7
+      },
+      {
+        "pass" : true,
+        "x" : 9,
+        "y" : 20,
+        "result" : 5
+      }
+    ]
+  },
+  {
+    "function" : "(define (count-evens x y) (length (filter even? (range x y))))",
+    "stats" : {
+      "passed_cases" : 4,
+      "total_cases" : 4
+    },
+    "tests" : [
+      {
+        "pass" : true,
+        "x" : 13,
+        "y" : 18,
+        "result" : 2
+      },
+      {
+        "pass" : true,
+        "x" : 11,
+        "y" : 10,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : 8,
+        "y" : 5,
+        "result" : 0
+      },
+      {
+        "pass" : true,
+        "x" : 15,
+        "y" : 14,
+        "result" : 0
+      }
+    ]
+  },
+  {
+    "function" : "(define (count-evens x y) (length (filter even? (range x y))))",
+    "stats" : {
+      "passed_cases" : 0,
+      "total_cases" : 4
+    },
+    "tests" : [
+      {
+        "pass" : false,
+        "x" : 4,
+        "y" : 19,
+        "result" : 8
+      },
+      {
+        "pass" : false,
+        "x" : 11,
+        "y" : 1,
+        "result" : "precondition-failed"
+      },
+      {
+        "pass" : false,
+        "x" : 4,
+        "y" : 13,
+        "result" : 5
+      },
+      {
+        "pass" : false,
+        "x" : 6,
+        "y" : 17,
+        "result" : 6
+      }
+    ]
+  }
+]

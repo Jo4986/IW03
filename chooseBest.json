@@ -1,0 +1,65 @@
+[
+    {
+      "function_body": "(define (count-positive-in-range x y) (length (filter (λ (i) (> i 0)) (range x y))))",
+      "precondition": "(< x y)",
+      "postcondition": "(= result (length (filter (λ (i) (> i 0)) (range x y))))",
+      "test_bounds": { "min_x": -5, "max_x": 10, "min_y": 0, "max_y": 15 },
+      "num_cases": 5
+    },
+    {
+      "function_body": "(define (count-positive-in-range x y) (length (filter (λ (i) (> i 0)) (range x y))))",
+      "precondition": "(or (= 1 1) (!= 1 2))",
+      "postcondition": "(>= result 0)",
+      "test_bounds": { "min_x": -5, "max_x": 10, "min_y": 0, "max_y": 15 },
+      "num_cases": 5
+    },
+    {
+      "function_body": "(define (count-positive-in-range x y) (length (filter (λ (i) (> i 0)) (range x y))))",
+      "precondition": "(< x y)",
+      "postcondition": "(= result (- y x))",
+      "test_bounds": { "min_x": -5, "max_x": 10, "min_y": 0, "max_y": 15 },
+      "num_cases": 5
+    },
+    {
+      "function_body": "(define (sum-of-positives x y) (apply + (filter (λ (i) (> i 0)) (range x y))))",
+      "precondition": "(< x y)",
+      "postcondition": "(= result (apply + (filter (λ (i) (> i 0)) (range x y))))",
+      "test_bounds": { "min_x": -8, "max_x": 5, "min_y": 0, "max_y": 12 },
+      "num_cases": 6
+    },
+    {
+      "function_body": "(define (sum-of-positives x y) (apply + (filter (λ (i) (> i 0)) (range x y))))",
+      "precondition": "(and (= 1 1) (!= 1 2))",
+      "postcondition": "(>= result 0)",
+      "test_bounds": { "min_x": -8, "max_x": 5, "min_y": 0, "max_y": 12 },
+      "num_cases": 6
+    },
+    {
+      "function_body": "(define (sum-of-positives x y) (apply + (filter (λ (i) (> i 0)) (range x y))))",
+      "precondition": "(< x y)",
+      "postcondition": "(> result (* x y))",
+      "test_bounds": { "min_x": -8, "max_x": 5, "min_y": 0, "max_y": 12 },
+      "num_cases": 6
+    },
+    {
+      "function_body": "(define (count-evens x y) (length (filter even? (range x y))))",
+      "precondition": "(< x y)",
+      "postcondition": "(= result (length (filter even? (range x y))))",
+      "test_bounds": { "min_x": 0, "max_x": 15, "min_y": 1, "max_y": 20 },
+      "num_cases": 4
+    },
+    {
+      "function_body": "(define (count-evens x y) (length (filter even? (range x y))))",
+      "precondition": "(or (= 1 1) (= 2 2))",
+      "postcondition": "(>= result 0)",
+      "test_bounds": { "min_x": 0, "max_x": 15, "min_y": 1, "max_y": 20 },
+      "num_cases": 4
+    },
+    {
+      "function_body": "(define (count-evens x y) (length (filter even? (range x y))))",
+      "precondition": "(<= x y)",
+      "postcondition": "(= result (- y x))",
+      "test_bounds": { "min_x": 0, "max_x": 15, "min_y": 1, "max_y": 20 },
+      "num_cases": 4
+    }
+  ]
